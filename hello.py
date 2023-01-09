@@ -4,9 +4,16 @@ import pandas as pd
 import numpy as np
 from transformers import GPT2TokenizerFast
 import pickle
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+OPEN_API_KEY = os.getenv("OPEN_API_KEY")
+
 
 COMPLETIONS_MODEL = "text-davinci-003"
-openai.api_key = "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"
+openai.api_key = OPEN_API_KEY
 
 # df = pd.read_csv('https://cdn.openai.com/API/examples/data/olympics_sections_text.csv')
 df = pd.read_csv('/Users/fran/hello/venv/sample2.csv', sep=";")
