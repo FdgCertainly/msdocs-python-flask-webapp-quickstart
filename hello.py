@@ -3,7 +3,6 @@ import openai
 import pandas as pd
 import numpy as np
 from transformers import GPT2TokenizerFast
-import pickle
 from dotenv import load_dotenv
 import os
 

@@ -1,14 +1,9 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
-import openai
-import pandas as pd
-import numpy as np
-from transformers import GPT2TokenizerFast
-import pickle
-from dotenv import load_dotenv
+
 import os
 
-from hello import answer_query_with_context,df, document_embeddings
+# from .hello import answer_query_with_context, df, document_embeddings
 
 
 app = Flask(__name__)
