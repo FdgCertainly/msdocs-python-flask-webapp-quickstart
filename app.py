@@ -1,12 +1,12 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
-# import openai
-# import pandas as pd
-# import numpy as np
-# from transformers import GPT2TokenizerFast
-# import pickle
-# from dotenv import load_dotenv
-# import os
+import openai
+import pandas as pd
+import numpy as np
+from transformers import GPT2TokenizerFast
+import pickle
+from dotenv import load_dotenv
+import os
 
 from hello import answer_query_with_context,df, document_embeddings,  order_document_sections_by_query_similarity, vector_similarity, load_embeddings, get_query_embedding,  construct_prompt, OPEN_API_KEY
 
