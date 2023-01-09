@@ -14,7 +14,7 @@ from hello import answer_query_with_context,df, document_embeddings,  order_docu
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
    print('Request for index page received')
    return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
