@@ -8,7 +8,7 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 # from dotenv import load_dotenv
 # import os
 
-# from hello import answer_query_with_context,df, document_embeddings,  order_document_sections_by_query_similarity, vector_similarity, load_embeddings, get_query_embedding,  construct_prompt, OPEN_API_KEY
+from hello import answer_query_with_context,df, document_embeddings,  order_document_sections_by_query_similarity, vector_similarity, load_embeddings, get_query_embedding,  construct_prompt, OPEN_API_KEY
 
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
    print('Request for index page received')
-   return render_template('index.html')
+   return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
 
 @app.route('/favicon.ico')
 def favicon():
