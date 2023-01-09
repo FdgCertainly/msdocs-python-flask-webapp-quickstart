@@ -26,7 +26,8 @@ def favicon():
    
 @app.route('/chat')
 def chat():
-    print('Request for chat page received')
+    return print('Request for chat page received')
+
     # return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
 
 @app.route('/hello', methods=['POST'])
