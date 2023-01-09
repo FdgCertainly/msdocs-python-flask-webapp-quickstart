@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 
 import os
 
-from hello import answer_query_with_context, df, document_embeddings
+from .hello import answer_query_with_context, df, document_embeddings
 
 
 app = Flask(__name__)
