@@ -9,7 +9,7 @@ import os
 
 load_dotenv()
 
-OPEN_API_KEY = os.getenv("OPEN_API_KEY")
+OPEN_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 COMPLETIONS_MODEL = "text-davinci-003"

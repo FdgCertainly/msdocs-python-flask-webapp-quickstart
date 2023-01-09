@@ -24,10 +24,10 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
    
    
-@app.route('/chat')
-def chat():
-    print('Request for chat page received')
-    return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
+# @app.route('/chat')
+# def chat():
+#     print('Request for chat page received')
+#     return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
 
 @app.route('/hello', methods=['POST'])
 def hello():
