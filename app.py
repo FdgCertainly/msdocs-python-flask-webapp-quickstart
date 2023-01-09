@@ -18,6 +18,7 @@ app = Flask(__name__)
 def index():
    print('Request for index page received')
    return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
+#    return render_template('index.html')
 
 @app.route('/favicon.ico')
 def favicon():
