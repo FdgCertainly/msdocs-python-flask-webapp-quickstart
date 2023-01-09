@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/1f67122b-666c-488e-b091-85c9e5128a64/postgresqlserversflexible/subscriptions/1f67122b-666c-488e-b091-85c9e5128a64/resourceGroups/Solution-Engineers/providers/Microsoft.Web/sites/franco-openai",
+    "appService.deploySubpath": "."
+}
