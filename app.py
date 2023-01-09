@@ -8,27 +8,26 @@ import pickle
 from dotenv import load_dotenv
 import os
 
-from hello import answer_query_with_context,df, document_embeddings,  order_document_sections_by_query_similarity, vector_similarity, load_embeddings, get_query_embedding,  construct_prompt, OPEN_API_KEY
+from hello import answer_query_with_context,df, document_embeddings
 
 
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
    print('Request for index page received')
-   return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
-#    return render_template('index.html')
+   return render_template('index.html')
 
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
    
    
-# @app.route('/chat', methods=['GET','POST'])
-# def chat():
-#     print('Request for chat page received')
-#     return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
+@app.route('/chat', methods=['GET','POST'])
+def chat():
+    print('Request for chat page received')
+    return answer_query_with_context("Do you have 90s dresses?", df, document_embeddings)
 
 @app.route('/hello', methods=['POST'])
 def hello():
